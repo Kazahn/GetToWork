@@ -10,8 +10,10 @@ public class level : MonoBehaviour {
     public Transform floorTile;
     public Transform wallTile;
 
-    public Color floorColor;
-    public Color wallColor;
+    private Color[] tileColours;
+
+    public Color floorColour;
+    public Color wallColour;
 
     public Texture2D levelTexture;
 
@@ -33,10 +35,26 @@ public class level : MonoBehaviour {
 
     void Loadlevel()
     {
+
+        tileColours = new Color[levelWidth * levelHeight];
+        tileColours = levelTexture.GetPixels();
+
         for (int y = 0; y < levelHeight; y++)
         {
             for (int x = 0; x < levelWidth; x++)
             {
+
+                 if (tileColours [x*y * levelWidth] == floorColour)
+                 {
+                       Instantiate(floorTile, new Vector3(x, y), Quaternion.identity);
+                 }
+
+
+                 if (tileColours [x * y * levelHeight] == wallColour)
+                 {
+                       Instantiate(wallTile, new Vector3(x, y), Quaternion.identity);
+                 }
+
 
             }
 
