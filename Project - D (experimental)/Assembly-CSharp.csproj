@@ -55,17 +55,18 @@
   <ItemGroup>
      <Compile Include="Assets\code\entities\entity.cs" />
      <Compile Include="Assets\code\entities\player\player.cs" />
+     <Compile Include="Assets\code\Level\Level.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>D:/Program Files/Unity/unity games/Project - D (experimental)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/bjojoh83/Documents/GitHub/GetToWork/Project - D (experimental)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Program Files/Unity/unity games/Project - D (experimental)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/bjojoh83/Documents/GitHub/GetToWork/Project - D (experimental)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/Program Files/Unity/unity games/Project - D (experimental)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/bjojoh83/Documents/GitHub/GetToWork/Project - D (experimental)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Program Files/Unity/unity games/Project - D (experimental)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/bjojoh83/Documents/GitHub/GetToWork/Project - D (experimental)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
