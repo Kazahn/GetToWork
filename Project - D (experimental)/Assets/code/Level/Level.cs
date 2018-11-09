@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class level : MonoBehaviour {
+public class Level : MonoBehaviour {
 
     private int levelWidth;
     private int levelHeight;
@@ -44,13 +44,13 @@ public class level : MonoBehaviour {
             for (int x = 0; x < levelWidth; x++)
             {
 
-                 if (tileColours [x*y * levelWidth] == floorColour)
+                 if (tileColours [x + y * levelWidth] == floorColour)
                  {
                        Instantiate(floorTile, new Vector3(x, y), Quaternion.identity);
                  }
 
 
-                 if (tileColours [x * y * levelHeight] == wallColour)
+                 if (tileColours [x + y * levelHeight] == wallColour)
                  {
                        Instantiate(wallTile, new Vector3(x, y), Quaternion.identity);
                  }
