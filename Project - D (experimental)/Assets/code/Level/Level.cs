@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour {
-
+    
     private int levelWidth;
     private int levelHeight;
 
@@ -23,15 +23,18 @@ public class Level : MonoBehaviour {
 	void Start () {
         levelWidth = levelTexture.width;
         levelHeight = levelTexture.height;
+        
+        
 
-        Loadlevel ();
+        Loadlevel();
         
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+
+    }
 
     void Loadlevel()
     {

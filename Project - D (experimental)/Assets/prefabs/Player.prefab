@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4609343325603218}
   - component: {fileID: 212123622111914084}
   - component: {fileID: 61477866276088298}
-  - component: {fileID: 50567997299828136}
+  - component: {fileID: 50575689439459806}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50567997299828136
+--- !u!50 &50575689439459806
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1

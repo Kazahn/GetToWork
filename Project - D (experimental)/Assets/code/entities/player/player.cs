@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class player : Entity {
 
+    
 
 
     void Start() {
+        
 
     }
 
@@ -15,6 +17,7 @@ public class player : Entity {
 
     void Update()
     {
+        
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             GetComponent<Rigidbody2D>().transform.position += Vector3.up * speed * Time.deltaTime;
