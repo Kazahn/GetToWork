@@ -14,10 +14,12 @@ public class Level : MonoBehaviour {
 
     public Color floorColour;
     public Color wallColour;
+    public Color spawnPointColour;
 
     public Texture2D levelTexture;
 
     public Entity player;
+    public Entity[] friendlyEntities;
 
 	// Use this for initialization
 	void Start () {
@@ -57,7 +59,18 @@ public class Level : MonoBehaviour {
                  {
                        Instantiate(wallTile, new Vector3(x, y), Quaternion.identity);
                  }
-
+                if (tileColours[x + y * levelHeight] == spawnPointColour)
+                {
+                    Instantiate(floorTile, new Vector3(x, y), Quaternion.identity);
+                    Vector2 pos = new Vector2(x, y);
+                    player.transform.position = pos;
+                    for (int i = 0; i < friendlyEntities.Length; i++)
+                    {
+                        Vector2 npos = pos;
+                        npos.x += i + 1;
+                        friendlyEntities[i].transform.position = npos;
+                    }
+                }
 
             }
 
