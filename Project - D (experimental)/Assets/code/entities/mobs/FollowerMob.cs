@@ -6,10 +6,11 @@ public class FollowerMob : Entity {
 
     public Entity following;
     public float distance;
+    
 
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame

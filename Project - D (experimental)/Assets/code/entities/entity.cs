@@ -7,10 +7,11 @@ public abstract class Entity : MonoBehaviour {
     public float speed = 5;
     // funkar ej :)
     private Rigidbody2D prb2d;
+    
 
 
     void Start () {
-
+        
         prb2d = GetComponent<Rigidbody2D>();
     }
 
