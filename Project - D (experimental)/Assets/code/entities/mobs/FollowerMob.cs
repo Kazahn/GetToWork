@@ -6,16 +6,15 @@ public class FollowerMob : Entity {
 
     public Entity following;
     public float distance;
-    
 
 	// Use this for initialization
 	void Start () {
         
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (following.GetComponent<Rigidbody2D>().transform.position.y > (GetComponent<Rigidbody2D>().transform.position.y + distance))
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (following.GetComponent<Rigidbody2D>().transform.position.y > (GetComponent<Rigidbody2D>().transform.position.y + distance))
         {
             GetComponent<Rigidbody2D>().transform.position += Vector3.up * speed * Time.deltaTime;
         }
@@ -31,5 +30,9 @@ public class FollowerMob : Entity {
         {
             GetComponent<Rigidbody2D>().transform.position += Vector3.left * speed * Time.deltaTime;
         }
+       
     }
+
+    
 }
+

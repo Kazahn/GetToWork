@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Entity : MonoBehaviour {
 
     public float speed = 5;
-    // funkar ej :)
+    
     private Rigidbody2D prb2d;
     
 

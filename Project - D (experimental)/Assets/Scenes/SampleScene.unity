@@ -421,7 +421,7 @@ MonoBehaviour:
   wallColour: {r: 0, g: 0, b: 1, a: 1}
   spawnPointColour: {r: 0, g: 0, b: 0, a: 1}
   levelTexture: {fileID: 2800000, guid: 35b63d47844b1b54893a55f64f529cc7, type: 3}
-  player: {fileID: 25703105}
+  player: {fileID: 0}
   friendlyEntities:
   - {fileID: 1116376115}
 --- !u!114 &1116376115 stripped
@@ -477,7 +477,7 @@ Prefab:
     - target: {fileID: 61472465616580180, guid: 3e8592610b95d1844a44fdff903f732b,
         type: 2}
       propertyPath: m_Offset.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61472465616580180, guid: 3e8592610b95d1844a44fdff903f732b,
         type: 2}
@@ -512,6 +512,25 @@ Prefab:
         type: 2}
       propertyPath: speed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114547661554219056, guid: 3e8592610b95d1844a44fdff903f732b,
+        type: 2}
+      propertyPath: distance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61472465616580180, guid: 3e8592610b95d1844a44fdff903f732b,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 212908407935961458, guid: 3e8592610b95d1844a44fdff903f732b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357426711844938, guid: 3e8592610b95d1844a44fdff903f732b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8592610b95d1844a44fdff903f732b, type: 2}
