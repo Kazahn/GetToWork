@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4383761474272164}
   - component: {fileID: 61480026861575754}
   - component: {fileID: 50679745993861180}
-  - component: {fileID: 114568331002690046}
+  - component: {fileID: 114739433912747902}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479168601847078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4162761610559342}
@@ -117,7 +117,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114568331002690046
+--- !u!114 &114739433912747902
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,13 +125,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479168601847078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1de500eb47328040a435bd870ba8236, type: 3}
+  m_Script: {fileID: 11500000, guid: 2127181bb51492a42ac88957d1215b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  health: 0
-  following: {fileID: 0}
-  distance: 2
+  health: 100
+  attacking1: {fileID: 0}
+  attacking: {fileID: 0}
+  distance: 1
 --- !u!212 &212916681331366098
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -166,8 +167,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 19
-  m_Sprite: {fileID: 21300492, guid: 60fbbb0f08ac7294892d08cf843360f4, type: 3}
+  m_SortingOrder: 20
+  m_Sprite: {fileID: 21300488, guid: 60fbbb0f08ac7294892d08cf843360f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

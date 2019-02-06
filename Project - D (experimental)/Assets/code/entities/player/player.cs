@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class Player : Entity {
 
-    
-
+    public ItemPlayerManager ipManager;
 
     void Start() {
-        
-
+        ipManager.AddToItemInventory(0);
     }
 
 

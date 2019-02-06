@@ -57,6 +57,9 @@
      <Compile Include="Assets\code\entities\mobs\AttackingMob.cs" />
      <Compile Include="Assets\code\entities\mobs\FollowerMob.cs" />
      <Compile Include="Assets\code\entities\player\Player.cs" />
+     <Compile Include="Assets\code\Inventories\Player\ItemManager.cs" />
+     <Compile Include="Assets\code\Inventories\Player\ItemPlayerManager.cs" />
+     <Compile Include="Assets\code\Items\Item.cs" />
      <Compile Include="Assets\code\Level\Level.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/bjojoh83/Documents/GitHub/GetToWork/Project - D (experimental)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
