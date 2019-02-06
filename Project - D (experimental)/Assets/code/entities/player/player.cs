@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class player : Entity {
+public class Player : Entity {
 
     
 
@@ -55,6 +55,6 @@ public class player : Entity {
 
     public void Die()
     {
-
+        print("I've been killed!");
     }
 }

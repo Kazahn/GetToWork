@@ -36,7 +36,7 @@ public class FollowerMob : Entity {
 
     public void Die()
     {
-
+        print("FollowerMob has been killed!");
     }
 }
 

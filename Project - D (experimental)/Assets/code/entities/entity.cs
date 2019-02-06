@@ -20,7 +20,7 @@ public abstract class Entity : MonoBehaviour {
        
 
     }
-    public void takeHealth (int amount)
+    public void TakeHealth (int amount)
     {
         health -= amount;
     }
