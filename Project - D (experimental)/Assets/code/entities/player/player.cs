@@ -49,5 +49,12 @@ public class player : Entity {
         {
             speed -= 1; 
         }
+
+        if (health <= 0) Die();
+    }
+
+    public void Die()
+    {
+
     }
 }

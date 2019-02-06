@@ -30,9 +30,13 @@ public class FollowerMob : Entity {
         {
             GetComponent<Rigidbody2D>().transform.position += Vector3.left * speed * Time.deltaTime;
         }
-       
+
+        if (health <= 0) Die();
     }
 
-    
+    public void Die()
+    {
+
+    }
 }
 

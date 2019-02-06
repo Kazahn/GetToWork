@@ -5,20 +5,24 @@ using UnityEngine;
 public abstract class Entity : MonoBehaviour {
 
     public float speed = 5;
-    
-    private Rigidbody2D prb2d;
+    public int health; 
     
 
 
     void Start () {
         
-        prb2d = GetComponent<Rigidbody2D>();
+        
     }
 
 
     void Update () {
 
-        prb2d.freezeRotation = true;
+       
 
     }
+    public void takeHealth (int amount)
+    {
+        health -= amount;
+    }
+
 }
