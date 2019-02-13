@@ -8,7 +8,7 @@ public class Player : Entity {
     public ItemPlayerManager ipManager;
 
     void Start() {
-        ipManager.AddToItemInventory(0);
+        ipManager.AddToItemInventory(0, 5);
     }
 
 

@@ -57,6 +57,8 @@
      <Compile Include="Assets\code\entities\mobs\AttackingMob.cs" />
      <Compile Include="Assets\code\entities\mobs\FollowerMob.cs" />
      <Compile Include="Assets\code\entities\player\Player.cs" />
+     <Compile Include="Assets\code\Inventories\GUI\ChestGUI.cs" />
+     <Compile Include="Assets\code\Inventories\Player\ChestInventory.cs" />
      <Compile Include="Assets\code\Inventories\Player\ItemManager.cs" />
      <Compile Include="Assets\code\Inventories\Player\ItemPlayerManager.cs" />
      <Compile Include="Assets\code\Items\Item.cs" />
