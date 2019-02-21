@@ -8,6 +8,12 @@ public class ChestInventory : MonoBehaviour {
 
     public List<Inventory> chestInv = new List<Inventory>();
 
+    public Entity checkingEntity;
+
+    public bool CanOpen;
+
+    public bool isOpen;
+
 	
 	void Start () {
 		
@@ -15,9 +21,18 @@ public class ChestInventory : MonoBehaviour {
 	
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.E))
-            openChest();
-	}
+
+        if (Vector2.Distance(GetComponent<Rigidbody2D>().transform.position, checkingEntity.GetComponent<Rigidbody2D>().transform.position) < 3)
+            CanOpen = true;
+        else
+            CanOpen = false;
+        if (CanOpen == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+                ToggleChest();
+            
+        }
+    }
 
     public void AddToItemInventory(int itemId, int amount) 
     {
@@ -31,9 +46,17 @@ public class ChestInventory : MonoBehaviour {
         }
     }
 
-    public void openChest()
+    public void ToggleChest()
     {
-        GetComponent<ChestGUI>().giveInventory(chestInv);
+        if (!isOpen)
+        {
+            GetComponent<ChestGUI>().drawInventory = true;
+            GetComponent<ChestGUI>().GiveInventory(chestInv);
+        }
+        else
+            GetComponent<ChestGUI>().drawInventory = false;
+        isOpen = !isOpen;
+
     }
 
 }
