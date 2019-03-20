@@ -61,8 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Generation scripts\LevelGeneration.cs" />
+    <Compile Include="Assets\Generation scripts\MapSpriteSelector.cs" />
     <Compile Include="Assets\Generation scripts\Room.cs" />
-    <Compile Include="Assets\MapSpriteSelector.cs" />
     <None Include="Assets\levelgen sprites\rooms.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/jarmo/Documents/GitHub/GetToWork/generator/levelgen/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

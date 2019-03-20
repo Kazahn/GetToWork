@@ -9,7 +9,7 @@ public class MapSpriteSelector : MonoBehaviour
                     spDLU, spLRU, spDRU, spDLR, spDLRU; //Names for every sprite, designated by their door locations.
 
     public bool down, left, right, up; //Room data for doors.
-    public int type; //0: normal, 1: starter.
+    public int type; //0: normal, 1: enter.
 
     public Color normalColor, enterColor; //Color for room types
     Color mainColor;
@@ -22,7 +22,7 @@ public class MapSpriteSelector : MonoBehaviour
         PickSprite();
         PickColor();
     }
-    void PickSprite()
+   void PickSprite()
     {
         if(up)
         {
@@ -110,10 +110,17 @@ public class MapSpriteSelector : MonoBehaviour
         {
             rend.sprite = spL;
         }
-      }
-
-
-
+    }
+    void PickColor()
+    {
+        if (type == 0)
+        {
+            mainColor = normalColor;
+        }
+        else if (type == 1)
+        {
+            mainColor = enterColor;
+        }
+        rend.color = mainColor;
     }
 }
-

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelGeneration : MonoBehaviour
 {
     Vector2 worldSize = new Vector2(4, 4); //Define level size in room-lengths (halfextents, actual size is twice this).
-    Room[,] rooms; //Make 2D array of rooms.
+    Room[,] rooms; //Make 2D array of rooms.'
     List<Vector2> takenPositions = new List<Vector2>(); //Keep a list of taken posistions in array for easier checkup using contains method.
     int gridSizeX, gridSizeY, numberOfRooms = 20; //Ints to keep track of max array size and number of rooms.
     public GameObject roomWhiteObj;
@@ -22,7 +22,7 @@ public class LevelGeneration : MonoBehaviour
 
         CreateRooms(); //Calls script that creates the array and the rooms contained within.
         SetRoomDoors(); //Calls script that decides how many doors should be in a room.
-        //DrawMap(); //Calls script that draws the map itself after calculating all the room info.
+        DrawMap(); //Calls script that draws the map itself after calculating all the room info.
     }
 
     void CreateRooms()
@@ -218,4 +218,24 @@ public class LevelGeneration : MonoBehaviour
             }
         }
     }
+    void DrawMap()
+    {
+        foreach (Room room in rooms)
+        {
+            if (room == null)
+            {
+                continue;
+            }
+            Vector2 drawPos = room.gridPos;
+            drawPos.x *= 16;
+            drawPos.y *= 8;
+            MapSpriteSelector mapper = Object.Instantiate(roomWhiteObj, drawPos, Quaternion.identity).GetComponent<MapSpriteSelector>();
+            mapper.type = room.type;
+            mapper.up = room.doorTop;
+            mapper.down = room.doorBot;
+            mapper.right = room.doorRight;
+            mapper.left = room.doorLeft;
+        }
+    }
+
 }
