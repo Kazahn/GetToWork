@@ -23,31 +23,32 @@ public class AttackingMob : Entity {
 	
 	
 	void Update () {
+
+     
         
-       
+            if (attacking.GetComponent<Rigidbody2D>().transform.position.y > (GetComponent<Rigidbody2D>().transform.position.y + distance))
+            {
+                GetComponent<Rigidbody2D>().transform.position += Vector3.up * speed * Time.deltaTime;
+            }
+            if (attacking.GetComponent<Rigidbody2D>().transform.position.y < (GetComponent<Rigidbody2D>().transform.position.y - distance))
+            {
+                GetComponent<Rigidbody2D>().transform.position += Vector3.down * speed * Time.deltaTime;
+            }
+            if (attacking.GetComponent<Rigidbody2D>().transform.position.x > (GetComponent<Rigidbody2D>().transform.position.x + distance))
+            {
+                GetComponent<Rigidbody2D>().transform.position += Vector3.right * speed * Time.deltaTime;
+            }
+            if (attacking.GetComponent<Rigidbody2D>().transform.position.x < (GetComponent<Rigidbody2D>().transform.position.x - distance))
+            {
+                GetComponent<Rigidbody2D>().transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+
+            if (Vector2.Distance(GetComponent<Rigidbody2D>().transform.position, attacking.transform.position) <= distance && canAttack)
+            {
+                AttackEntity();
+                StartCoroutine(WaitForAttack());
+            }
         
-        if (attacking.GetComponent<Rigidbody2D>().transform.position.y > (GetComponent<Rigidbody2D>().transform.position.y + distance))
-        {
-            GetComponent<Rigidbody2D>().transform.position += Vector3.up * speed * Time.deltaTime;
-        }
-        if (attacking.GetComponent<Rigidbody2D>().transform.position.y < (GetComponent<Rigidbody2D>().transform.position.y - distance))
-        {
-            GetComponent<Rigidbody2D>().transform.position += Vector3.down * speed * Time.deltaTime;
-        }
-        if (attacking.GetComponent<Rigidbody2D>().transform.position.x > (GetComponent<Rigidbody2D>().transform.position.x + distance))
-        {
-            GetComponent<Rigidbody2D>().transform.position += Vector3.right * speed * Time.deltaTime;
-        }
-        if (attacking.GetComponent<Rigidbody2D>().transform.position.x < (GetComponent<Rigidbody2D>().transform.position.x - distance))
-        {
-            GetComponent<Rigidbody2D>().transform.position += Vector3.left * speed * Time.deltaTime;
-        }
-        
-        if (Vector2.Distance(GetComponent<Rigidbody2D>().transform.position, attacking.transform.position) <= distance && canAttack)
-        {
-            AttackEntity();
-            StartCoroutine(WaitForAttack());
-        }
 
     }
 
