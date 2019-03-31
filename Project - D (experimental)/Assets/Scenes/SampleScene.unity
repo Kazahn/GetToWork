@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 1688176188}
   - component: {fileID: 1688176187}
   - component: {fileID: 1688176190}
+  - component: {fileID: 1688176191}
   - component: {fileID: 1688176189}
   - component: {fileID: 1688176186}
   - component: {fileID: 1688176185}
@@ -794,6 +795,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c77795a7b402746a936806a3280dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1688176191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688176184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35735713d04ca74a81e8842ff20c231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iManager: {fileID: 0}
+  items: []
 --- !u!1 &2126318923
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,8 +841,8 @@ MonoBehaviour:
   chestInv:
   - item: {fileID: 444837727}
     amountOfItem: 1
-  checkingEntity: {fileID: 0}
-  CanOpen: 0
+  checkingEntity: {fileID: 1688176189}
+  CanOpen: 1
   isOpen: 0
 --- !u!114 &2126318925
 MonoBehaviour:
